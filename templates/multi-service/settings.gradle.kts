@@ -14,12 +14,12 @@ dependencyResolutionManagement {
                 password = providers.gradleProperty("gpr.key")
                     .orElse(providers.environmentVariable("GITHUB_TOKEN")).orNull
             }
-            content { includeGroup("io.github.khkim6040.platform") }
+            content { includeGroup("io.github.khkim6040.cplatform") }
         }
     }
     versionCatalogs {
         create("libs") {
-            from("io.github.khkim6040.platform:platform-catalog:${providers.gradleProperty("platformVersion").get()}")
+            from("io.github.khkim6040.cplatform:platform-catalog:${providers.gradleProperty("platformVersion").get()}")
         }
     }
 }

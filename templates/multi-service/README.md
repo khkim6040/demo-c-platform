@@ -1,6 +1,6 @@
 # demo-c-template
 
-Insurance platform PoC, C안의 비즈니스 모노레포. `demo-c-platform`의 `tools/create-project.sh`가 `templates/multi-service/`에서 생성한다. 플랫폼 코드는 GitHub Packages 아티팩트(`io.github.khkim6040.platform:*`)로 가져온다.
+Insurance platform PoC, C안의 비즈니스 모노레포. `demo-c-platform`의 `tools/create-project.sh`가 `templates/multi-service/`에서 생성한다. 플랫폼 코드는 GitHub Packages 아티팩트(`io.github.khkim6040.cplatform:*`)로 가져온다.
 
 ## 새 프로젝트 만들기
 

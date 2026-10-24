@@ -1,7 +1,7 @@
 // Shared publishing setup. Each module declares its own publication; this block
 // gives every module the same coordinates and the GitHub Packages repository.
 subprojects {
-    group = "io.github.khkim6040.platform"
+    group = "io.github.khkim6040.cplatform"
     version = providers.gradleProperty("platformVersion").orElse("0.0.0-LOCAL").get()
 
     repositories {

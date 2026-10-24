@@ -2,7 +2,7 @@
 
 Insurance platform PoC, C안(퍼블리시 + 제너레이터)의 플랫폼 레포. 아티팩트·워크플로는 B안(`demo-b-platform`)과 같고, 템플릿을 GitHub Template 레포 대신 이 레포의 `templates/`와 `tools/create-project.sh`로 전달한다.
 
-## 퍼블리시 아티팩트 (GitHub Packages, group `io.github.khkim6040.platform`)
+## 퍼블리시 아티팩트 (GitHub Packages, group `io.github.khkim6040.cplatform`)
 
 | 아티팩트 | 내용 |
 |---|---|

@@ -10,7 +10,7 @@ javaPlatform {
 dependencies {
     api(platform(libs.spring.boot.bom))
     constraints {
-        api("io.github.khkim6040.platform:platform-http-starter:${project.version}")
+        api("io.github.khkim6040.cplatform:platform-http-starter:${project.version}")
     }
 }
 
