@@ -1,0 +1,12 @@
+# Platform defaults. Lowest precedence: any app property overrides these.
+spring:
+  threads:
+    virtual:
+      enabled: true
+  mvc:
+    problemdetails:
+      enabled: true
+  http:
+    clients:
+      connect-timeout: 2s
+      read-timeout: 5s
