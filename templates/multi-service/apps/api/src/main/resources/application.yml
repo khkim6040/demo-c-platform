@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: api
+server:
+  port: 8080
+external:
+  rating:
+    base-url: http://localhost:9090

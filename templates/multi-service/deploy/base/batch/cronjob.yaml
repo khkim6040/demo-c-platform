@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: batch
+spec:
+  schedule: "0 1 * * *"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: batch
+              image: ghcr.io/khkim6040/demo-c-template/batch
+              resources:
+                limits:
+                  cpu: "500m"
+                  memory: 384Mi

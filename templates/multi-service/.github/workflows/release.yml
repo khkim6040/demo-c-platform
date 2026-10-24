@@ -1,0 +1,13 @@
+name: release
+on:
+  push:
+    tags: ["*-v*"]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  release:
+    uses: khkim6040/demo-c-platform/.github/workflows/release-app.yml@v1.0.0
+    secrets: inherit
