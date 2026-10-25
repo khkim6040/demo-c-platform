@@ -1,0 +1,16 @@
+# Platform observability defaults. Lowest precedence: any app property overrides these.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,circuitbreakers,retries
+  observations:
+    key-values:
+      application: ${spring.application.name:unknown}
+  tracing:
+    sampling:
+      probability: 1.0
+  otlp:
+    metrics:
+      export:
+        enabled: false
