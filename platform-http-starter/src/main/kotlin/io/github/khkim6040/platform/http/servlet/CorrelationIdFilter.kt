@@ -10,9 +10,11 @@ import java.util.UUID
 
 class CorrelationIdFilter : OncePerRequestFilter() {
     override fun doFilterInternal(request: HttpServletRequest, response: HttpServletResponse, chain: FilterChain) {
-        val id = request.getHeader(CorrelationId.HEADER)?.takeIf { it.isNotBlank() } ?: UUID.randomUUID().toString()
+        val inbound = request.getHeader(CorrelationId.HEADER)?.takeIf { it.isNotBlank() }
+        val id = inbound ?: UUID.randomUUID().toString()
         MDC.put(CorrelationId.MDC_KEY, id)
         response.setHeader(CorrelationId.HEADER, id)
+        response.setHeader(CorrelationId.SOURCE_HEADER, if (inbound == null) "generated" else "propagated")
         try {
             chain.doFilter(request, response)
         } finally {

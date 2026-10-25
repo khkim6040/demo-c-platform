@@ -20,12 +20,14 @@ class PlatformHttpStarterTest {
         val result = mvc.get().uri("/ok").exchange()
         assertThat(result).hasStatusOk()
         assertThat(result.response.getHeader(CorrelationId.HEADER)).isNotBlank()
+        assertThat(result.response.getHeader(CorrelationId.SOURCE_HEADER)).isEqualTo("generated")
     }
 
     @Test
     fun `echoes incoming correlation id`() {
         val result = mvc.get().uri("/ok").header(CorrelationId.HEADER, "abc-123").exchange()
         assertThat(result.response.getHeader(CorrelationId.HEADER)).isEqualTo("abc-123")
+        assertThat(result.response.getHeader(CorrelationId.SOURCE_HEADER)).isEqualTo("propagated")
     }
 
     @Test
