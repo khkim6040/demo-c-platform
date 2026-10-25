@@ -1,4 +1,6 @@
 # Platform defaults. Lowest precedence: any app property overrides these.
+server:
+  shutdown: graceful
 spring:
   threads:
     virtual:

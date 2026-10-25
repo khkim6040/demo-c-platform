@@ -9,5 +9,5 @@ permissions:
 
 jobs:
   release:
-    uses: khkim6040/demo-c-platform/.github/workflows/release-app.yml@v1.0.0
+    uses: khkim6040/demo-c-platform/.github/workflows/release-app.yml@v1.5.0
     secrets: inherit
