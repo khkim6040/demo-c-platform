@@ -47,6 +47,7 @@ class PlatformHttpStarterTest {
     @Test
     fun `platform defaults apply with lowest precedence`() {
         assertThat(env.getProperty("spring.threads.virtual.enabled")).isEqualTo("true")
+        assertThat(env.getProperty("server.shutdown")).isEqualTo("graceful")
         assertThat(env.getProperty("spring.mvc.problemdetails.enabled")).isEqualTo("true")
         assertThat(env.getProperty("spring.http.clients.connect-timeout")).isEqualTo("2s")
         assertThat(env.getProperty("spring.http.clients.read-timeout")).isEqualTo("9s")
