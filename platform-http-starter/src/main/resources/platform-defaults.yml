@@ -9,4 +9,4 @@ spring:
   http:
     clients:
       connect-timeout: 2s
-      read-timeout: 5s
+      read-timeout: 4s
