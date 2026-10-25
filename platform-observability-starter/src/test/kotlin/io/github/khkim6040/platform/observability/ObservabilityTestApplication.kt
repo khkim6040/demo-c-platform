@@ -1,0 +1,6 @@
+package io.github.khkim6040.platform.observability
+
+import org.springframework.boot.autoconfigure.SpringBootApplication
+
+@SpringBootApplication
+class ObservabilityTestApplication

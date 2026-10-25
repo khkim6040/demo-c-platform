@@ -9,6 +9,8 @@ catalog {
         version("platform", project.version.toString())
         library("platform-bom", "io.github.khkim6040.cplatform", "platform-bom").versionRef("platform")
         library("platform-http-starter", "io.github.khkim6040.cplatform", "platform-http-starter").versionRef("platform")
+        library("platform-observability-starter", "io.github.khkim6040.cplatform", "platform-observability-starter").versionRef("platform")
+        library("platform-resilience-starter", "io.github.khkim6040.cplatform", "platform-resilience-starter").versionRef("platform")
     }
 }
 

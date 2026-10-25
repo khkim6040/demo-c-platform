@@ -8,4 +8,6 @@ include(
     "platform-bom",
     "platform-catalog",
     "platform-http-starter",
+    "platform-observability-starter",
+    "platform-resilience-starter",
 )
